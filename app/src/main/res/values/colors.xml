@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#37474F</color>
+    <color name="colorAccent">#f0f0f0</color>
+    <color name="yellow">#FFCA28</color>
+    <color name="light_gray">#b0b0b0</color>
+    <color name="medium_gray">#888888</color>
+    <color name="darkGray">#37474F</color>
+    <color name="gray">#525252</color>
+    <color name="green">#009688</color>
+    <color name="red">#c05050</color>
+    <color name="darkGreen">#007766</color>
+    <color name="white">#fdfefe</color>
+    <color name="black">#2a2a2a</color>
+    <color name="chatMe">#dcf8c6</color>
+    <color name="chatSpecial">#f0f0f0</color>
+    <color name="chatPartner">#ece5dd</color>
+    <color name="reallyBlack">#111111</color>
+    <color name="orange">#FFA500</color>
+</resources>

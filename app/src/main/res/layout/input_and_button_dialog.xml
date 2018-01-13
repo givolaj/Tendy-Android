@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:background="@color/darkGray">
+
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/title"
+        android:text="adsdas"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/title"
+        android:id="@+id/subtitle"
+        android:text="adsdas"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textAlignment="viewStart"
+        android:gravity="start"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/inputContainer"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/subtitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabelGrayGreen">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/code"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textAlignment="viewStart"
+            android:textColor="@color/green"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/edittext_text_size" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/inputContainer"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/green_round_bg"
+        android:text="@string/go"
+        android:textColor="@color/white"
+        android:textSize="@dimen/login_btn_text_size"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

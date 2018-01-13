@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_weight="5"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="start|bottom"
+            android:lines="1"
+            android:paddingEnd="7dp"
+            android:paddingStart="7dp"
+            android:text="@string/tendi_found_1_s_people_around_you"
+            android:textAlignment="viewStart"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/notification_subtitle" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_tendy_icon" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/imagesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="@dimen/notification_image_size"
+                android:layout_height="@dimen/notification_image_size"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp" />
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="@dimen/notification_image_size"
+                android:layout_height="@dimen/notification_image_size"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp" />
+            <ImageView
+                android:id="@+id/image0"
+                android:layout_width="@dimen/notification_image_size"
+                android:layout_height="@dimen/notification_image_size"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp" />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="@dimen/notification_image_size"
+                android:layout_height="@dimen/notification_image_size"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp" />
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="@dimen/notification_image_size"
+                android:layout_height="@dimen/notification_image_size"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp" />
+        </LinearLayout>
+
+</LinearLayout>

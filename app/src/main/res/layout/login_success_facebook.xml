@@ -1,0 +1,44 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/yellow">
+
+    <ImageView
+        android:id="@+id/image"
+        android:src="@drawable/ic_profile_white"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"/>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/image"
+        android:layout_marginStart="20dp">
+
+    <TextView
+        android:text="@string/successfully_enrolled_facebook"
+        android:gravity="center"
+        android:textSize="@dimen/dialog_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_marginTop="10dp"
+        android:text="@string/go"
+        android:background="@color/darkGray"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dialog_text_size"
+        android:layout_width="80dp"
+        android:layout_height="25dp" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.atn.tendy.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/darkGray"
+            android:paddingStart="25dp"
+            android:paddingEnd="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/app_name"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:onClick="openMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menu_white" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/tabsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@color/darkGray"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="@dimen/navigation_icon_size"
+                    android:layout_height="@dimen/navigation_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/icon_margin_top"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:id="@+id/profileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/profileImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_icon_margin_menu"
+                    android:text="@string/profile"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/action_bar_title" />
+
+                <LinearLayout
+                    android:id="@+id/profileLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/line_bottom_margin"
+                    android:background="@color/darkGray"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/chat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/chatImage"
+                    android:layout_width="@dimen/navigation_icon_size"
+                    android:layout_height="@dimen/navigation_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/icon_margin_top"
+                    android:src="@drawable/ic_chat" />
+
+                <TextView
+                    android:id="@+id/chatText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/chatImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_icon_margin_menu"
+                    android:text="@string/chats"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/action_bar_title" />
+
+                <LinearLayout
+                    android:id="@+id/chatLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/line_bottom_margin"
+                    android:background="@color/darkGray"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/discovery"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/discoveryImage"
+                    android:layout_width="@dimen/navigation_icon_size"
+                    android:layout_height="@dimen/navigation_icon_size"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/icon_margin_top"
+                    android:src="@drawable/ic_discovery" />
+
+                <TextView
+                    android:id="@+id/discoveryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/discoveryImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/text_icon_margin_menu"
+                    android:text="@string/discovery"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/action_bar_title" />
+
+                <LinearLayout
+                    android:id="@+id/discoveryLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/line_bottom_margin"
+                    android:background="@color/darkGray"
+                    android:orientation="horizontal"></LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"></FrameLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/drawer"></include>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/profileImage"
+        android:layout_width="@dimen/notification_image_size"
+        android:layout_height="@dimen/notification_image_size"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/male1" />
+
+    <LinearLayout
+        android:layout_toStartOf="@+id/logo"
+        android:id="@+id/textContainer"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/profileImage"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lines="1"
+            android:paddingEnd="7dp"
+            android:paddingStart="7dp"
+            android:text="@string/no_profile_yet_title"
+            android:textAlignment="viewStart"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/notification_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:lines="1"
+            android:paddingEnd="7dp"
+            android:paddingStart="7dp"
+            android:text="@string/no_profile_yet_title"
+            android:textAlignment="viewStart"
+            android:textColor="@color/medium_gray"
+            android:textSize="@dimen/notification_subtitle" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_alignBottom="@+id/textContainer"
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_tendy_icon" />
+
+</RelativeLayout>

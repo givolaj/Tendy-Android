@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        app:civ_border_color="@color/green"
+        app:civ_border_overlay="true"
+        app:civ_border_width="0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="10dp"
+        android:layout_alignTop="@+id/textContainer"
+        android:layout_width="@dimen/discovery_item_image_size"
+        android:layout_height="@dimen/discovery_item_image_size"
+        android:background="@android:color/transparent"
+        android:src="@drawable/male1" />
+
+    <LinearLayout
+        android:gravity="start"
+        android:id="@+id/textContainer"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/profileImage"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="viewStart"
+            android:paddingStart="@dimen/text_view_padding"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_profile_yet_title"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/list_item_title" />
+
+        <TextView
+            android:textAlignment="viewStart"
+            android:paddingStart="@dimen/text_view_padding"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:layout_marginTop="@dimen/discovery_text_margin"
+            android:id="@+id/subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_profile_yet_subtitle1"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/list_item_subtitle" />
+
+        <TextView
+            android:textAlignment="viewStart"
+            android:maxLines="2"
+            android:paddingStart="@dimen/text_view_padding"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:paddingBottom="2dp"
+            android:layout_marginTop="@dimen/discovery_text_margin"
+            android:id="@+id/subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_profile_yet_subtitle2"
+            android:textColor="@color/gray"
+            android:textStyle="italic"
+            android:textSize="@dimen/list_item_subtitle2" />
+
+        <TextView
+            android:textAlignment="viewStart"
+            android:paddingStart="@dimen/text_view_padding"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:layout_marginTop="@dimen/discovery_text_margin"
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_profile_yet_date"
+            android:textColor="@color/medium_gray"
+            android:textSize="@dimen/list_item_date" />
+
+    </LinearLayout>
+    
+</RelativeLayout>

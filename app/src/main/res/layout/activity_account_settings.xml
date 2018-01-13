@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.atn.tendy.profile.AccountSettingsActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkGray"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:padding="@dimen/slide_text"
+        android:text="@string/real_profile"
+        android:textColor="@color/yellow"
+        android:textSize="@dimen/action_bar_title" />
+
+    <LinearLayout
+        android:id="@+id/profileContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/darkGray"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:transitionName="@string/header_transition_name">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/realProfileImage"
+            android:layout_width="@dimen/profile_image_size"
+            android:layout_height="@dimen/profile_image_size"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/male3"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="1dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:id="@+id/message"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:text="@string/you_can_t_edit_this_data_anymore_if_you_feel_loke_you_have_to_contact_our_support"
+            android:textColor="@color/white"
+            android:textSize="@dimen/side_menu_item_text_size"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:animateLayoutChanges="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="50dp"
+            android:paddingLeft="@dimen/fragment_padding"
+            android:paddingRight="@dimen/fragment_padding">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:checked="true"
+                    android:text="@string/male"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/edittext_text_size" />
+
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:buttonTint="@color/green"
+                    android:text="@string/female"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/edittext_text_size" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:buttonTint="@color/green"
+                    android:text="@string/other"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/edittext_text_size" />
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelGrayGreen"
+                app:hintAnimationEnabled="false">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="35"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGray"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/edittext_text_size" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelGrayGreen"
+                app:hintAnimationEnabled="false">
+
+                <EditText
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:hint="@string/birthday"
+                    android:imeOptions="actionNext"
+                    android:inputType="none"
+                    android:lines="1"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGray"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/edittext_text_size" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelGrayGreen"
+                app:hintAnimationEnabled="false">
+
+                <EditText
+                    android:id="@+id/profession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/profession"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLength="50"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGray"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/edittext_text_size" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/TextLabelGrayGreen"
+                app:hintAnimationEnabled="false">
+
+                <EditText
+                    android:id="@+id/something"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:freezesText="true"
+                    android:gravity="top|start"
+                    android:hint="@string/something"
+                    android:inputType="textMultiLine"
+                    android:maxLength="80"
+                    android:maxLines="2"
+                    android:nextFocusForward="@+id/save"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/darkGray"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="@dimen/edittext_text_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:elevation="6dp"
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/green_round_bg"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:text="@string/save"
+                android:textColor="#f0f0f0"
+                android:textSize="@dimen/login_btn_text_size" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

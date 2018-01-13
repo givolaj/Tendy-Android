@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="15dp">
+
+    <RelativeLayout
+        android:id="@+id/profileImageContainer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignTop="@+id/textContainer"
+        android:layout_marginStart="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/discovery_item_image_size"
+            android:layout_height="@dimen/discovery_item_image_size"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/male1"
+            app:civ_border_color="@color/green"
+            app:civ_border_overlay="true"
+            app:civ_border_width="0dp" />
+
+        <TextView
+            android:id="@+id/msgCount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/profileImage"
+            android:layout_alignEnd="@+id/profileImage"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginEnd="-7dp"
+            android:background="@drawable/badge_circle"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/textContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/profileImageContainer"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:paddingStart="@dimen/text_view_padding"
+            android:text="@string/no_profile_yet_title"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="@dimen/list_item_title"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="@dimen/discovery_text_margin"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:paddingStart="@dimen/text_view_padding"
+            android:text="@string/no_profile_yet_subtitle1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/list_item_subtitle" />
+
+        <TextView
+            android:maxLines="2"
+            android:id="@+id/subtitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="@dimen/discovery_text_margin"
+            android:paddingBottom="2dp"
+            android:paddingEnd="@dimen/text_view_padding"
+            android:paddingStart="@dimen/text_view_padding"
+            android:text="@string/no_profile_yet_subtitle2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/list_item_subtitle2"
+            android:textStyle="italic" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="@dimen/discovery_text_margin"
+                android:paddingEnd="@dimen/text_view_padding"
+                android:paddingStart="@dimen/text_view_padding"
+                android:text="@string/no_profile_yet_date"
+                android:textAlignment="viewStart"
+                android:textColor="@color/medium_gray"
+                android:textSize="@dimen/list_item_date" />
+
+            <TextView
+                android:layout_alignBottom="@+id/date"
+                android:id="@+id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="1dp"
+                android:lines="1"
+                android:paddingEnd="@dimen/text_view_padding"
+                android:paddingStart="@dimen/text_view_padding"
+                android:text="2:00:00"
+                android:textAlignment="viewStart"
+                android:textColor="@color/green"
+                android:textSize="@dimen/list_item_timer" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

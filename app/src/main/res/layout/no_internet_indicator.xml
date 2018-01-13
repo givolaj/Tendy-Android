@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkGray">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_marginEnd="15dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:indicatorName="LineScalePulseOutRapidIndicator"
+            android:indeterminateTint="@color/light_gray"
+            />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@+id/text"
+            android:indeterminateTint="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/searching_for_web_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/action_bar_title" />
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/please_wait"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/slide_text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
